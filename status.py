@@ -6,6 +6,7 @@ BUILD_ID = os.getenv("BUILD_ID")
 COMMIT = os.getenv("GIT_COMMIT")
 
 job_link = os.environ["BUILD_URL"]
+print("------- job_link: {}".format(job_link))
 response = requests.get('{}wfapi'.format(job_link), verify=False)
 print(response.text)
 response = response.json()
